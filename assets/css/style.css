@@ -59,17 +59,24 @@ footer {
 .cls-icono-hamburguesa{
     display:none;
 }
-.cls-display-item-menu{
+.cls-display-item-menu a{
     display:flex;
     flex-direction: column;
     justify-content:center;
     align-items:center;
     font-size: 12px;
+    padding: 12px;
     color:white;
+    text-decoration: none;
 }
 .cls-espaciado-item-menu{
     padding-bottom: 10px;
 }
+
+.cls-display-item-menu a:hover {
+    color:lightgray;
+}
+
 /*Filtro (ordenado por)*/
 .cls-formato-nav{
     display:flex;
@@ -216,11 +223,16 @@ ul.cls-pagination li a:hover:not(.active) {
     nav {
         grid-area: nav;
         background-color:#E1E2E1;
-        height: 10vh !important;
+        height: auto !important;
     }
     section {
         grid-area: section;
         background-color: white;
+        height: auto;
+    }
+    footer {
+        grid-area: footer;
+        background-color:#00306C;
         height: auto;
     }
     .cls-img-titulo-menu{
