@@ -166,15 +166,15 @@ footer {
     align-items: center;
     padding:10px 0px 10px 0px;
 }
-ul.pagination {
+ul.cls-pagination {
     display: inline-block;
     padding: 0;
     margin: 0;
 }
 
-ul.pagination li {display: inline;}
+ul.cls-pagination li {display: inline;}
 
-ul.pagination li a {
+ul.cls-pagination li a {
     color: black;
     float: left;
     padding: 8px 16px;
@@ -183,13 +183,13 @@ ul.pagination li a {
     border: 1px solid #ddd;
 }
 
-ul.pagination li a.active {
+ul.cls-pagination li a.active {
     background-color:  #00537B;
     color: white;
     border: 1px solid  #00537B;
 }
 
-ul.pagination li a:hover:not(.active) {
+ul.cls-pagination li a:hover:not(.active) {
     background-color: #ddd;
 }
 
