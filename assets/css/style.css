@@ -106,7 +106,9 @@ footer {
     height: 200px;
     border-width: thin;
     border-style: solid;
-    border-color: #000;
+    border-color:lightgray;
+    box-shadow: 2px 2px 4px 0px #888888; /*Borde a cards*/
+    border-radius: 5px;
 }
 .cls-tamannio-card{
     width: 150px;
@@ -114,7 +116,6 @@ footer {
 }
 .cls-formato-nombre-productos{
     font-size: 14px;
-    font-weight: bold;
 }
 .cls-color-nombre-producto{
     color:#444449;
@@ -140,6 +141,7 @@ footer {
 .cls-color-comprar{
     background: #00537B;
     color:#FFFFFF;
+    padding: 4px 14px; /*tamannio de botones*/
     cursor: pointer;
 }
 /*Footer*/
