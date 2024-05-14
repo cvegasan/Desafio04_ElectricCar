@@ -211,7 +211,7 @@ ul.cls-pagination li a:hover:not(.active) {
     menu {
         grid-area: menu;
         background-color: #00599B;
-        height: 15vh !important;
+        height: auto !important;
     }
     nav {
         grid-area: nav;
@@ -241,5 +241,15 @@ ul.cls-pagination li a:hover:not(.active) {
         background-color: white;
         margin: 13px 30px 5px 30px;
         padding: 0px 80px 0px 80px;
+    }
+    /*Selectores para dejar el primero y ocultar el resto de los autos*/
+    #auto-02,
+    #auto-03,
+    #auto-04,
+    #auto-05,
+    #auto-06,
+    #auto-07,
+    #auto-08{
+        display: none;
     }
 }
