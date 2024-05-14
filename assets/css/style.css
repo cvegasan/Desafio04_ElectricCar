@@ -1,0 +1,243 @@
+body{
+    margin: 0px;          /* sin margenes a los lados */
+    font-family: 'Poppins', sans-serif; /* cuando no funciona la primera, se ocupa la segunda, sino la tercera. estos son los "fallbacks" */
+}
+body *{                 /* reseteo de etiquetas (*) significa todo, todas las etiquetas dentro de body */
+    margin: 0px;
+    border: 0px;        /* rich black hexadecimal #RRGGBB*/
+    padding: 0px;       /* sin margenes a los lados */
+}
+/*Definición del layout del grid*/
+.cls-definicion-layout-grid {
+    display: grid;
+    height: 100vh; /*Todos los height de las areas, deben sumar el total del height del layout*/
+    grid-template-areas:
+        'menu nav'
+        'menu section'
+        'footer section';
+    grid-template-columns: 1fr 6fr;
+}
+/*Definición de las areas del layout del grid*/
+nav {
+    grid-area: nav;
+    background-color:#E1E2E1;
+    height: 10vh; /*Todos los height de las areas, deben sumar el total del height del layout*/
+}
+menu {
+    grid-area: menu;
+    background-color: #00599B;
+    height: 85vh; /*Todos los height de las areas, deben sumar el total del height del layout*/
+}
+section {
+    grid-area: section;
+    background-color: white; /*gray;*/
+    height: 90vh; /*Todos los height de las areas, deben sumar el total del height del layout*/
+}
+
+footer {
+    grid-area: footer;
+    background-color:#00306C;
+    height: 15vh; /*Todos los height de las areas, deben sumar el total del height del layout*/
+}
+/*Definición de las clases utilizadas*/
+/*Menu*/
+.cls-img-titulo-menu{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    padding:20px 0px 20px 0px;
+}
+.cls-tamannio-img-auto{
+    width: 40px;
+    height: 40px;
+}
+.cls-titulo-menu{
+    font-size: 18px;
+    padding-left:5px;
+}
+.cls-icono-hamburguesa{
+    display:none;
+}
+.cls-display-item-menu{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    font-size: 12px;
+    color:white;
+}
+.cls-espaciado-item-menu{
+    padding-bottom: 10px;
+}
+/*Filtro (ordenado por)*/
+.cls-formato-nav{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:14px;
+    padding:10px;
+}
+.cls-formato-select{
+    color: #697797;
+    border-radius: .3em;
+    width:90%
+}
+
+/*Productos PRUEBA*/
+.cls-grid-container-productos {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    background-color: white;
+    margin: 10px 30px 10px 30px;
+    padding: 0px 30px 0px 30px;
+}
+
+.cls-grid-container-productos > div {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0 0 0;
+    font-size: 30px;
+}
+.cls-contenedor-card{
+    width: 255px;
+    height: 200px;
+    border-width: thin;
+    border-style: solid;
+    border-color: #000;
+}
+.cls-tamannio-card{
+    width: 150px;
+    height: 150px;
+}
+.cls-formato-nombre-productos{
+    font-size: 14px;
+    font-weight: bold;
+}
+.cls-color-nombre-producto{
+    color:#444449;
+}
+
+.cls-formato-precio-productos{
+    font-size: 12px;
+    font-weight: bold;
+}
+.cls-color-precio-producto{
+    color:#61646A;
+}
+
+.cls-formato-comprar{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    font-size: 12px;
+    width:100%;
+}
+.cls-color-comprar{
+    background: #00537B;
+    color:#FFFFFF;
+    cursor: pointer;
+}
+/*Footer*/
+.cls-formato-footer{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#FFFFFF;
+}
+.cls-separacion-iconos-texto{
+    padding: 15px 0px 15px 0px;
+}
+
+.cls-texto-footer{
+    font-size: 16px;
+}
+
+/*Paginacion*/
+.cls-alinear-numeracion{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px 0px 10px 0px;
+}
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+ul.pagination li a.active {
+    background-color:  #00537B;
+    color: white;
+    border: 1px solid  #00537B;
+}
+
+ul.pagination li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+/*Definicion de media queries */
+@media (max-width: 576px) {
+    .cls-definicion-layout-grid{
+        grid-template-areas:
+        "menu"
+        "nav"
+        "section"
+        "footer";
+        grid-template-columns: auto;
+    }
+    .cls-display-item-menu{
+        display: none;
+    }
+    menu {
+        grid-area: menu;
+        background-color: #00599B;
+        height: 15vh !important;
+    }
+    nav {
+        grid-area: nav;
+        background-color:#E1E2E1;
+        height: 10vh !important;
+    }
+    section {
+        grid-area: section;
+        background-color: white;
+        height: auto;
+    }
+    .cls-img-titulo-menu{
+        display: flex;
+        padding:20px 0px 0px 20px;
+    }
+    .cls-icono-hamburguesa{
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding:0px 20px 0px 0px;
+    }
+    .cls-grid-container-productos {
+        display: grid;
+        grid-template-columns: 257px;
+        grid-gap: 10px !important;
+        background-color: white;
+        margin: 13px 30px 5px 30px;
+        padding: 0px 80px 0px 80px;
+    }
+}
