@@ -218,7 +218,7 @@ ul.cls-pagination li a:hover:not(.active) {
     menu {
         grid-area: menu;
         background-color: #00599B;
-        height: auto;
+        height: 15vh;
     }
     nav {
         grid-area: nav;
